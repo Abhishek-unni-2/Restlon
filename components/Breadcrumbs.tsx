@@ -32,14 +32,14 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   };
 
   return (
-    <div className="w-full bg-ivory/60 border-b border-sand py-2.5 px-4 sm:px-6 lg:px-8 text-xs text-warmgrey">
+    <div className="w-full bg-mist/60 border-b border-stone-200/70 py-3 px-4 sm:px-6 lg:px-8 text-xs text-charcoal-500">
       <JsonLd data={breadcrumbSchema} />
-      <div className="max-w-7xl mx-auto flex items-center gap-1.5 flex-wrap">
+      <div className="max-w-7xl mx-auto flex items-center gap-2 flex-wrap">
         <Link
           href="/"
-          className="flex items-center gap-1 hover:text-teal text-stone-600 transition-colors"
+          className="flex items-center gap-1 hover:text-nordic-800 text-charcoal-700 transition-colors"
         >
-          <Home className="w-3.5 h-3.5" />
+          <Home className="w-3.5 h-3.5 text-nordic-700" />
           <span>Home</span>
         </Link>
 
@@ -47,15 +47,15 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
           const isLast = index === items.length - 1;
           return (
             <React.Fragment key={index}>
-              <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
+              <ChevronRight className="w-3 h-3 text-stone-400" />
               {isLast || !item.href ? (
-                <span className="font-semibold text-stone-900 truncate max-w-[200px] sm:max-w-none">
+                <span className="font-bold text-charcoal truncate max-w-[200px] sm:max-w-none">
                   {item.label}
                 </span>
               ) : (
                 <Link
                   href={item.href}
-                  className="hover:text-teal text-stone-600 transition-colors truncate max-w-[150px] sm:max-w-none"
+                  className="hover:text-nordic-800 text-charcoal-700 transition-colors truncate max-w-[150px] sm:max-w-none"
                 >
                   {item.label}
                 </Link>

@@ -22,7 +22,6 @@ export default function FaqAccordion({
   subtitle,
   className = "",
 }: FaqAccordionProps) {
-  // First item open by default
   const [openIndices, setOpenIndices] = useState<number[]>([0]);
 
   const toggleIndex = (index: number) => {
@@ -35,47 +34,49 @@ export default function FaqAccordion({
 
   return (
     <div className={`w-full ${className}`}>
-      {/* Schema.org FAQPage JSON-LD generated automatically */}
       <FaqPageJsonLd faqs={faqs} />
 
       {title && (
-        <div className="mb-8 text-center max-w-2xl mx-auto">
-          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">
+        <div className="mb-10 text-center max-w-2xl mx-auto">
+          <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+            Clear Guidance
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mt-3 tracking-tight">
             {title}
           </h2>
-          {subtitle && <p className="text-sm text-warmgrey mt-2">{subtitle}</p>}
+          {subtitle && <p className="text-sm text-charcoal-500 mt-2">{subtitle}</p>}
         </div>
       )}
 
-      <div className="space-y-3 max-w-3xl mx-auto">
+      <div className="space-y-3.5 max-w-3xl mx-auto">
         {faqs.map((faq, index) => {
           const isOpen = openIndices.includes(index);
           return (
             <div
               key={index}
-              className={`rounded-xl border transition-all ${
+              className={`rounded-2xl border transition-all ${
                 isOpen
-                  ? "bg-white border-teal/40 shadow-sm"
-                  : "bg-ivory/60 hover:bg-white border-sand"
+                  ? "bg-white border-nordic-400 shadow-subtle"
+                  : "bg-mist/50 hover:bg-white border-stone-200/80"
               }`}
             >
               <button
                 onClick={() => toggleIndex(index)}
-                className="w-full flex items-center justify-between text-left p-5 focus:outline-none"
+                className="w-full flex items-center justify-between text-left p-5 sm:p-6 focus:outline-none"
                 aria-expanded={isOpen}
               >
-                <span className="font-serif font-semibold text-stone-900 text-sm sm:text-base pr-4">
+                <span className="font-bold text-charcoal text-sm sm:text-base pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown
                   className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${
-                    isOpen ? "rotate-180 text-teal" : "text-warmgrey"
+                    isOpen ? "rotate-180 text-nordic-800" : "text-charcoal-500"
                   }`}
                 />
               </button>
 
               {isOpen && (
-                <div className="px-5 pb-5 text-stone-600 text-xs sm:text-sm leading-relaxed border-t border-sand/40 pt-3">
+                <div className="px-5 sm:px-6 pb-6 text-charcoal-700 text-xs sm:text-sm leading-relaxed border-t border-stone-100 pt-3">
                   {faq.answer}
                 </div>
               )}

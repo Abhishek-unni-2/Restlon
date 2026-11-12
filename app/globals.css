@@ -10,29 +10,30 @@
   }
 
   body {
-    background-color: #F8F6F2;
-    color: #1C1917;
-    font-family: var(--font-sans), system-ui, sans-serif;
+    background-color: #FCFCFA; /* Scandinavian Cloud White */
+    color: #1A1C1B; /* Ink Charcoal */
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif), Georgia, serif;
-    letter-spacing: -0.02em;
+    font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+    letter-spacing: -0.03em;
+    color: #1A1C1B;
   }
 }
 
-/* Custom scrollbar */
+/* Custom minimal scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1ECE3;
+  background: #F7F6F2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D6CCA7;
-  border-radius: 4px;
+  background: #CFDDD5;
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #6B6660;
+  background: #7DA391;
 }

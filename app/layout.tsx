@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,34 +9,29 @@ import { CartProvider } from "@/components/CartContext";
 import { OrganizationJsonLd } from "@/components/JsonLd";
 import { brandConfig } from "@/data/brandConfig";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-});
-
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(brandConfig.domain),
   title: {
-    default: `${brandConfig.name} – Premium Mattresses & Bed Shop in India`,
+    default: `${brandConfig.name} – Pure Restorative Mattresses & Organic Sleep Systems`,
     template: `%s | ${brandConfig.name}`,
   },
-  description: `${brandConfig.name}: ${brandConfig.tagline}. Orthopedic spinal support, 100% natural Kerala latex, and climate-adapted mattresses with 100-night trial and free doorstep delivery.`,
+  description: `${brandConfig.name}: ${brandConfig.tagline}. Natural organic Kerala latex, doctor-certified orthopedic spinal alignment, and climate-adaptive airflow. 100-night trial & free doorstep delivery.`,
   keywords: [
-    "mattress online india",
+    "natural latex mattress india",
     "orthopedic mattress",
-    "natural latex mattress",
-    "king size mattress",
-    "memory foam mattress",
+    "organic mattress",
+    "king size bed",
+    "scandinavian sleep",
     "best mattress kerala",
-    "mattress shop tamil nadu",
-    "buy mattress mumbai pune",
+    "chennai cooling mattress",
+    "mumbai orthopedic bed",
   ],
   authors: [{ name: brandConfig.legalName }],
   creator: brandConfig.legalName,
@@ -45,12 +40,12 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: brandConfig.domain,
     siteName: brandConfig.name,
-    title: `${brandConfig.name} – Premium Mattresses & Bed Shop in India`,
+    title: `${brandConfig.name} – Pure Restorative Mattresses & Organic Sleep Systems`,
     description: brandConfig.tagline,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${brandConfig.name} – Premium Mattresses & Bed Shop in India`,
+    title: `${brandConfig.name} – Pure Restorative Mattresses & Organic Sleep Systems`,
     description: brandConfig.tagline,
   },
 };
@@ -61,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-ivory text-stone-900 selection:bg-teal selection:text-white pb-14 md:pb-0">
+    <html lang="en" className={jakarta.variable}>
+      <body className="min-h-screen flex flex-col bg-cloud text-charcoal selection:bg-nordic-800 selection:text-white pb-14 md:pb-0 antialiased">
         <OrganizationJsonLd />
         <CartProvider>
           <Header />
