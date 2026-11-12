@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyMobileBar from "@/components/StickyMobileBar";
 import ScrollReveal from "@/components/ScrollReveal";
+import Preloader from "@/components/Preloader";
 import CartDrawer from "@/components/CartDrawer";
 import { CartProvider } from "@/components/CartContext";
 import { OrganizationJsonLd } from "@/components/JsonLd";
@@ -57,8 +58,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={manrope.variable}>
+    <html lang="en" className={manrope.variable} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "try{document.documentElement.setAttribute(sessionStorage.getItem('rl_seen')?'data-seen':'data-wait','1')}catch(e){}",
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-cloud text-charcoal selection:bg-nordic-800 selection:text-white pb-14 md:pb-0 antialiased">
+        <Preloader />
         <OrganizationJsonLd />
         <ScrollReveal />
         <CartProvider>
