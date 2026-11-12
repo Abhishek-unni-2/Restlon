@@ -68,22 +68,18 @@ export default function ProductTypePage({ params }: Props) {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-mist/70 to-cloud border-b border-stone-200/80 py-14 sm:py-20">
+      <section className="bg-white py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-nordic-100 text-nordic-900 text-xs font-semibold">
-                <Sparkles className="w-3.5 h-3.5 text-nordic-700" />
-                <span>Specialized Sleep Guide & Specifications</span>
-              </div>
 
               {/* Exact H1 */}
-              <h1 className="text-3xl sm:text-5xl font-extrabold text-charcoal tracking-tight leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-charcoal tracking-tight">
                 {pt.name}
               </h1>
 
               {/* Angle subhead */}
-              <p className="text-base sm:text-lg text-nordic-800 font-semibold">
+              <p className="text-lg sm:text-xl text-charcoal-700">
                 {pt.angle} — {pt.emphasize}
               </p>
 
@@ -95,14 +91,14 @@ export default function ProductTypePage({ params }: Props) {
               <div className="pt-4 flex flex-wrap gap-3">
                 <Link
                   href={`/collections/${pt.relatedCategorySlug}`}
-                  className="px-6 py-3.5 bg-nordic-800 hover:bg-nordic-900 text-white font-bold rounded-2xl text-xs sm:text-sm transition-colors shadow-sm flex items-center gap-2"
+                  className="px-6 py-3 bg-nordic-800 hover:bg-nordic-900 text-white font-semibold rounded-full text-base transition-colors duration-300 active:scale-[0.98] flex items-center gap-2"
                 >
                   <span>Explore {pt.name} Models</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
                   href="#dimensions"
-                  className="px-6 py-3.5 bg-white hover:bg-mist text-charcoal font-semibold rounded-2xl text-xs sm:text-sm border border-stone-200 shadow-subtle transition-colors"
+                  className="px-6 py-3 text-nordic-800 hover:bg-mist font-semibold rounded-full text-base transition-colors duration-300"
                 >
                   View Dimensions Table
                 </a>
@@ -110,7 +106,7 @@ export default function ProductTypePage({ params }: Props) {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative h-72 sm:h-84 w-full rounded-3xl overflow-hidden shadow-card border border-stone-200/80 bg-white">
+              <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-mist">
                 <Image
                   src={pt.heroImage}
                   alt={`${pt.name} luxury master bedroom setup`}
@@ -119,15 +115,6 @@ export default function ProductTypePage({ params }: Props) {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <div className="text-xs uppercase tracking-wider text-nordic-200 font-bold">
-                    100-Night Sleep Trial
-                  </div>
-                  <div className="text-lg font-bold">
-                    Zero-Sag Medical Support
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -138,10 +125,10 @@ export default function ProductTypePage({ params }: Props) {
       <section className="py-20 bg-white border-b border-stone-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+            <span className="text-sm font-medium text-nordic-700">
               Engineering Hallmarks
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mt-2 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-charcoal mt-2 tracking-tight">
               Key Features of {brandConfig.name}&apos;s {pt.name}
             </h2>
           </div>
@@ -150,12 +137,12 @@ export default function ProductTypePage({ params }: Props) {
             {pt.keyFeatures.map((feat, idx) => (
               <div
                 key={idx}
-                className="p-7 rounded-3xl bg-mist/50 border border-stone-200/80 hover:border-nordic-400 transition-colors space-y-2.5"
+                className="p-7 rounded-2xl bg-mist border border-stone-200/80 hover:border-nordic-400 transition-colors space-y-2.5"
               >
                 <div className="w-10 h-10 rounded-2xl bg-nordic-100 text-nordic-900 flex items-center justify-center font-mono font-bold text-sm">
                   0{idx + 1}
                 </div>
-                <h3 className="font-bold text-base text-charcoal">
+                <h3 className="font-semibold text-base text-charcoal">
                   {feat.title}
                 </h3>
                 <p className="text-xs text-charcoal-500 leading-relaxed">
@@ -168,13 +155,13 @@ export default function ProductTypePage({ params }: Props) {
       </section>
 
       {/* Size & Dimensions Table */}
-      <section id="dimensions" className="py-20 sm:py-28 bg-mist/60 border-b border-stone-200/70">
+      <section id="dimensions" className="py-20 sm:py-28 bg-mist border-b border-stone-200/70">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+            <span className="text-sm font-medium text-nordic-700">
               Indian Dimensions
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mt-2 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-charcoal mt-2 tracking-tight">
               {pt.name} Size & Dimension Specifications
             </h2>
             <p className="text-xs sm:text-sm text-charcoal-500 mt-1">
@@ -182,10 +169,10 @@ export default function ProductTypePage({ params }: Props) {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl border border-stone-200/80 p-7 shadow-card overflow-x-auto">
+          <div className="bg-white rounded-2xl border border-stone-200/80 p-7 shadow-card overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-stone-200 text-xs font-bold uppercase tracking-wider text-charcoal-500 bg-mist/60">
+                <tr className="border-b border-stone-200 text-sm font-medium text-charcoal-500 bg-mist">
                   <th className="py-3 px-4 rounded-l-xl">Configuration</th>
                   <th className="py-3 px-4">Inches (L × W)</th>
                   <th className="py-3 px-4">Centimeters (L × W)</th>
@@ -234,10 +221,10 @@ export default function ProductTypePage({ params }: Props) {
       <section className="py-20 sm:py-28 bg-white border-b border-stone-200/70">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="space-y-4">
-            <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+            <span className="text-sm font-medium text-nordic-700">
               Direct-from-Manufacturer Value
             </span>
-            <h2 className="text-3xl font-bold text-charcoal">
+            <h2 className="text-3xl font-semibold text-charcoal">
               Why Choose {brandConfig.name}&apos;s {pt.name}?
             </h2>
             <p className="text-charcoal-700 text-base leading-relaxed text-justify">
@@ -245,7 +232,7 @@ export default function ProductTypePage({ params }: Props) {
             </p>
           </div>
 
-          <div className="p-7 rounded-3xl bg-mist/60 border border-stone-200/80 space-y-3">
+          <div className="p-7 rounded-2xl bg-mist border border-stone-200/80 space-y-3">
             <div className="flex items-center gap-2 text-nordic-900 font-bold text-sm">
               <MapPin className="w-4 h-4" />
               <span>Doorstep Delivery Across India, Kerala, Tamil Nadu & Maharashtra</span>
@@ -261,10 +248,10 @@ export default function ProductTypePage({ params }: Props) {
       <section className="py-14 bg-nordic-900 text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <span className="text-xs uppercase tracking-widest text-nordic-200 font-bold">
+            <span className="text-sm font-medium text-nordic-200">
               Ready to Upgrade?
             </span>
-            <h3 className="text-2xl font-bold mt-1">
+            <h3 className="text-2xl font-semibold mt-1 text-white">
               Shop {pt.relatedCategoryName}
             </h3>
             <p className="text-xs sm:text-sm text-nordic-200 mt-1">
@@ -274,7 +261,7 @@ export default function ProductTypePage({ params }: Props) {
 
           <Link
             href={`/collections/${pt.relatedCategorySlug}`}
-            className="px-8 py-4 bg-white text-nordic-900 hover:bg-mist font-bold rounded-2xl shadow-lg transition-colors flex items-center gap-2 text-sm flex-shrink-0"
+            className="px-8 py-4 bg-white text-nordic-900 hover:bg-mist font-bold rounded-2xl shadow-subtle transition-colors flex items-center gap-2 text-sm flex-shrink-0"
           >
             <span>Explore Collection</span>
             <ArrowRight className="w-4 h-4" />

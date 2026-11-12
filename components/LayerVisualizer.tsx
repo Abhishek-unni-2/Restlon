@@ -90,10 +90,10 @@ export default function LayerVisualizer() {
     <section className="py-20 sm:py-28 bg-white border-y border-stone-200/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+          <span className="text-sm font-medium text-nordic-700">
             Internal Anatomy
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mt-3 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-charcoal mt-3 tracking-tight">
             See What&apos;s Inside Our Sleep Systems
           </h2>
           <p className="text-charcoal-700 text-sm sm:text-base mt-2.5">
@@ -157,13 +157,13 @@ export default function LayerVisualizer() {
           </div>
 
           {/* Layer Detail Display (Right Column) */}
-          <div className="lg:col-span-7 bg-mist/60 rounded-3xl border border-stone-200/80 p-6 sm:p-8 space-y-6">
+          <div className="lg:col-span-7 bg-mist rounded-2xl border border-stone-200/80 p-6 sm:p-8 space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-stone-200/70">
               <div>
                 <span className="text-xs font-mono font-bold text-nordic-700 uppercase tracking-wider">
                   Layer {activeLayer.number} Breakdown
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-charcoal mt-1">
+                <h3 className="text-xl sm:text-2xl font-semibold text-charcoal mt-1">
                   {activeLayer.name}
                 </h3>
               </div>

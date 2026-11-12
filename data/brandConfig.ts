@@ -8,7 +8,7 @@
 
 export const brandConfig = {
   // Brand Name placeholder configurable here:
-  name: process.env.NEXT_PUBLIC_BRAND_NAME || "Restora",
+  name: process.env.NEXT_PUBLIC_BRAND_NAME || "Restlon Comforts",
   legalName: "Restora Sleep Innovations Pvt. Ltd.",
   tagline: "India's Finest Climate-Adapted Orthopedic Mattresses",
   domain: "https://restorasleep.in",

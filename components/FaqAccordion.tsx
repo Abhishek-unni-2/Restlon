@@ -38,10 +38,10 @@ export default function FaqAccordion({
 
       {title && (
         <div className="mb-10 text-center max-w-2xl mx-auto">
-          <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+          <span className="text-sm font-medium text-nordic-700">
             Clear Guidance
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mt-3 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-charcoal mt-3 tracking-tight">
             {title}
           </h2>
           {subtitle && <p className="text-sm text-charcoal-500 mt-2">{subtitle}</p>}
@@ -54,10 +54,10 @@ export default function FaqAccordion({
           return (
             <div
               key={index}
-              className={`rounded-2xl border transition-all ${
+              className={`rounded-2xl border transition-all duration-300 ${
                 isOpen
                   ? "bg-white border-nordic-400 shadow-subtle"
-                  : "bg-mist/50 hover:bg-white border-stone-200/80"
+                  : "bg-mist hover:bg-white border-stone-200/80"
               }`}
             >
               <button
@@ -75,11 +75,13 @@ export default function FaqAccordion({
                 />
               </button>
 
-              {isOpen && (
-                <div className="px-5 sm:px-6 pb-6 text-charcoal-700 text-xs sm:text-sm leading-relaxed border-t border-stone-100 pt-3">
-                  {faq.answer}
+              <div className="accordion-panel" data-open={isOpen} aria-hidden={!isOpen}>
+                <div>
+                  <div className="mx-5 sm:mx-6 pb-6 text-charcoal-700 text-xs sm:text-sm leading-relaxed border-t border-stone-100 pt-3">
+                    {faq.answer}
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           );
         })}

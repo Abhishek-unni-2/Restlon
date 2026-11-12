@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Sparkles, ShieldCheck, Star, Award, RotateCcw } from "lucide-react";
-import { brandConfig } from "@/data/brandConfig";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 interface HeroProps {
   headline?: string;
@@ -13,139 +12,103 @@ interface HeroProps {
   primaryCtaLink?: string;
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
-  backgroundImage?: string;
 }
 
 export default function Hero({
-  headline = "Pure, Restorative Sleep. Born from Nature, Engineered for India.",
-  subhead = "Experience medical-grade orthopedic spinal alignment, 100% certified organic Kerala latex, and micro-convection cooling designed to bring tranquil, undisturbed sleep to every Indian bedroom.",
-  primaryCtaText = "Explore All 9 Collections",
+  headline = "Sleep that holds you up and keeps you cool.",
+  subhead = "Natural Kerala latex and orthopedic support, made for Indian homes.",
+  primaryCtaText = "Shop collections",
   primaryCtaLink = "#collections",
-  secondaryCtaText = "Find Your Mattress Type",
-  secondaryCtaLink = "/mattress-types/orthopedic-mattress",
-  backgroundImage = "/images/home-about-us.jpg",
+  secondaryCtaText = "Compare sizes",
+  secondaryCtaLink = "/mattress-types/king-size-mattress",
 }: HeroProps) {
+  const photo = useRef<HTMLDivElement>(null);
+
+  // Gentle scroll parallax on the photo (transform only, rAF throttled)
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const el = photo.current;
+    if (!el) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      el.style.setProperty("--py", `${Math.min(window.scrollY, 900) * 0.18}px`);
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  const words = headline.split(" ");
+  const d = (i: number) => ({ "--i": i } as React.CSSProperties);
+
   return (
-    <section className="relative w-full bg-gradient-to-b from-mist/70 via-cloud to-white border-b border-stone-200/80 py-16 sm:py-24 overflow-hidden">
-      {/* Subtle organic background ambient glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-nordic-100/60 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-80 h-80 bg-clay-100/50 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative flex flex-col overflow-hidden bg-charcoal sm:h-[calc(100vh-120px)] sm:min-h-[560px] sm:max-h-[880px] sm:flex-row sm:items-end">
+      <div className="relative h-[46vh] min-h-[300px] w-full overflow-hidden sm:absolute sm:inset-0 sm:h-full">
+        <div ref={photo} className="hero-banner-photo absolute inset-x-0 -top-[10%] h-[120%]">
+          <Image
+            src="/images/home-about-us.jpg"
+            alt="A child resting on a Restlon Comforts mattress"
+            fill
+            priority
+            className="hero-zoom object-cover object-[68%_40%]"
+            sizes="100vw"
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/10 sm:bg-black/40" />
+      </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Text Column */}
-          <div className="lg:col-span-7 space-y-6 text-left">
-            {/* Top Nordic Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-nordic-100/80 border border-nordic-200 text-nordic-900 text-xs font-semibold shadow-subtle">
-              <Sparkles className="w-3.5 h-3.5 text-nordic-700" />
-              <span>Scandinavian Ergonomics • 100% Natural Organic Materials</span>
-            </div>
-
-            {/* Impactful Minimalist Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal tracking-tight leading-[1.12]">
-              {headline}
-            </h1>
-
-            {/* Subhead */}
-            <p className="text-base sm:text-lg text-charcoal-700 leading-relaxed max-w-2xl font-normal">
-              {subhead}
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
-              <Link
-                href={primaryCtaLink}
-                className="px-8 py-4 bg-nordic-800 hover:bg-nordic-900 text-white font-bold rounded-2xl text-center shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group"
-              >
-                <span>{primaryCtaText}</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-
-              <Link
-                href={secondaryCtaLink}
-                className="px-8 py-4 bg-white hover:bg-mist text-charcoal font-semibold rounded-2xl text-center border border-stone-200/90 shadow-subtle transition-all flex items-center justify-center gap-2"
-              >
-                <span>{secondaryCtaText}</span>
-              </Link>
-            </div>
-
-            {/* Trust Markers Bar */}
-            <div className="pt-6 border-t border-stone-200/70 grid grid-cols-3 gap-4 text-xs">
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-nordic-100 text-nordic-800 flex items-center justify-center flex-shrink-0">
-                  <RotateCcw className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="font-bold text-charcoal block">100 Nights</span>
-                  <span className="text-[11px] text-charcoal-500">Risk-Free Trial</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-nordic-100 text-nordic-800 flex items-center justify-center flex-shrink-0">
-                  <ShieldCheck className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="font-bold text-charcoal block">10 Years</span>
-                  <span className="text-[11px] text-charcoal-500">Non-Sag Warranty</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-nordic-100 text-nordic-800 flex items-center justify-center flex-shrink-0">
-                  <Award className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="font-bold text-charcoal block">Zero-Cost EMI</span>
-                  <span className="text-[11px] text-charcoal-500">From ₹1,499/mo</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Visual Column (Bright, airy master bedroom image with floating badges) */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative h-80 sm:h-96 lg:h-[460px] w-full rounded-3xl overflow-hidden shadow-card border border-stone-200/80 bg-white">
-              <Image
-                src={backgroundImage}
-                alt={`${brandConfig.name} serene bedroom ambiance`}
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 45vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-
-              {/* Floating Customer Rating Badge */}
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-md border border-stone-100 flex items-center gap-2.5">
-                <div className="flex text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
-                  ))}
-                </div>
-                <div className="text-[11px] text-charcoal font-semibold">
-                  <span className="font-bold">4.9/5</span> (12,400+ Indian Sleepers)
-                </div>
-              </div>
-
-              {/* Floating Material Chip */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-lg border border-stone-100 flex items-center justify-between">
-                <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-nordic-700 block">
-                    Kerala Plantation Harvest
-                  </span>
-                  <span className="text-xs sm:text-sm font-bold text-charcoal">
-                    100% GOLS-Certified Organic Latex
-                  </span>
-                </div>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-xl bg-nordic-100 text-nordic-900">
-                  Zero Off-Gas
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-28 pt-8 sm:px-6 sm:pb-20 sm:pt-0 lg:px-8">
+        <h1
+          className="max-w-[760px] text-4xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl"
+          aria-label={headline}
+        >
+          {words.map((w, i) => (
+            <React.Fragment key={i}>
+              <span className="word-mask" aria-hidden="true">
+                <span className="word" style={{ "--w": i } as React.CSSProperties}>
+                  {w}
                 </span>
-              </div>
-            </div>
-          </div>
+              </span>{" "}
+            </React.Fragment>
+          ))}
+        </h1>
+        <p style={d(6)} className="hero-in mt-6 max-w-[520px] text-lg text-white/85 sm:text-xl">
+          {subhead}
+        </p>
+        <div style={d(7)} className="hero-in mt-9 flex flex-col gap-3 sm:flex-row">
+          <Link
+            href={primaryCtaLink}
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-base font-semibold text-charcoal transition-colors duration-300 hover:bg-pebble active:scale-[0.98]"
+          >
+            {primaryCtaText}
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+          </Link>
+          <Link
+            href={secondaryCtaLink}
+            className="inline-flex items-center justify-center rounded-full border border-white/50 px-6 py-3 text-base font-semibold text-white transition-colors duration-300 hover:bg-white/10 active:scale-[0.98]"
+          >
+            {secondaryCtaText}
+          </Link>
         </div>
       </div>
+
+      <a
+        href="#collections"
+        aria-label="Scroll to collections"
+        style={d(8)}
+        className="hero-in absolute bottom-8 right-6 z-10 hidden flex-col items-center gap-2 text-sm text-white/80 sm:flex lg:right-10"
+      >
+        <span>Scroll</span>
+        <span className="relative block h-10 w-px overflow-hidden bg-white/30">
+          <span className="scroll-cue absolute left-0 top-0 h-4 w-px bg-white" />
+        </span>
+      </a>
     </section>
   );
 }

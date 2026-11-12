@@ -70,42 +70,33 @@ export default function LocationPage({ params }: Props) {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-mist/70 to-cloud border-b border-stone-200/80 py-14 sm:py-20">
+      <section className="bg-white py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-nordic-100 text-nordic-900 text-xs font-semibold">
-                <MapPin className="w-3.5 h-3.5 text-nordic-700" />
-                <span>Regional Distribution Center • {loc.stateName}</span>
-              </div>
 
               {/* Exact H1 */}
-              <h1 className="text-3xl sm:text-5xl font-extrabold text-charcoal tracking-tight leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-charcoal tracking-tight">
                 {brandConfig.name} Mattress & Bed Shop in {loc.stateName}
               </h1>
 
               {/* Positioning Line */}
-              <p className="text-base sm:text-lg text-nordic-800 font-semibold">
+              <p className="text-lg sm:text-xl text-charcoal-700">
                 {loc.positioningLine}
               </p>
-
-              {/* Delivery Promise Pill */}
-              <div className="p-4 rounded-2xl bg-white border border-stone-200 shadow-subtle flex items-center gap-3 text-xs sm:text-sm text-charcoal">
-                <Truck className="w-5 h-5 text-nordic-700 flex-shrink-0" />
-                <span className="font-medium">{loc.localDeliveryPromise}</span>
-              </div>
+              <p className="text-base text-charcoal-500">{loc.localDeliveryPromise}</p>
 
               <div className="pt-3 flex flex-wrap gap-3">
                 <a
                   href="#recommended-models"
-                  className="px-6 py-3.5 bg-nordic-800 hover:bg-nordic-900 text-white font-bold rounded-2xl text-xs sm:text-sm transition-colors shadow-sm flex items-center gap-2"
+                  className="px-6 py-3 bg-nordic-800 hover:bg-nordic-900 text-white font-semibold rounded-full text-base transition-colors duration-300 active:scale-[0.98] flex items-center gap-2"
                 >
                   <span>Explore {loc.stateName} Editions</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
                   href="#cities"
-                  className="px-6 py-3.5 bg-white hover:bg-mist text-charcoal font-semibold rounded-2xl text-xs sm:text-sm border border-stone-200 shadow-subtle transition-colors"
+                  className="px-6 py-3 text-nordic-800 hover:bg-mist font-semibold rounded-full text-base transition-colors duration-300"
                 >
                   Cities Served ({loc.cities.length})
                 </a>
@@ -113,7 +104,7 @@ export default function LocationPage({ params }: Props) {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative h-72 sm:h-84 w-full rounded-3xl overflow-hidden shadow-card border border-stone-200/80 bg-white">
+              <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-mist">
                 <Image
                   src={loc.heroImage}
                   alt={`${brandConfig.name} mattress in ${loc.stateName} home`}
@@ -122,15 +113,6 @@ export default function LocationPage({ params }: Props) {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <div className="text-xs uppercase tracking-wider text-nordic-200 font-bold">
-                    Direct Factory Logistics
-                  </div>
-                  <div className="text-lg font-bold">
-                    Fast Doorstep Delivery in {loc.stateName}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -140,12 +122,8 @@ export default function LocationPage({ params }: Props) {
       {/* Climate Adaptation Section */}
       <section className="py-20 bg-white border-b border-stone-200/70">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-clay-50 text-clay-600 text-xs font-semibold">
-            <ThermometerSun className="w-3.5 h-3.5 text-clay" />
-            <span>Climate & Environment Engineering</span>
-          </div>
 
-          <h2 className="text-3xl font-bold text-charcoal">
+          <h2 className="text-3xl font-semibold text-charcoal">
             Engineered Specifically for {loc.stateName}&apos;s Unique Climate
           </h2>
 
@@ -156,13 +134,13 @@ export default function LocationPage({ params }: Props) {
       </section>
 
       {/* Recommended Categories */}
-      <section id="recommended-models" className="py-20 sm:py-28 bg-mist/60 border-b border-stone-200/70">
+      <section id="recommended-models" className="py-20 sm:py-28 bg-mist border-b border-stone-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+            <span className="text-sm font-medium text-nordic-700">
               Regional Favorites
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mt-2 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-charcoal mt-2 tracking-tight">
               Top Recommended Mattresses for {loc.stateName} Homes
             </h2>
             <p className="text-charcoal-700 text-sm mt-1">
@@ -174,7 +152,7 @@ export default function LocationPage({ params }: Props) {
             {recommendedCats.map((cat) => (
               <div
                 key={cat!.slug}
-                className="bg-white rounded-3xl border border-stone-200/80 p-6 sm:p-7 flex flex-col justify-between shadow-subtle hover:shadow-card-hover transition-all group"
+                className="bg-white rounded-2xl border border-stone-200/80 p-6 sm:p-7 flex flex-col justify-between shadow-subtle hover:shadow-card-hover transition-all group"
               >
                 <div>
                   <div className="relative h-48 w-full rounded-2xl overflow-hidden mb-4 bg-mist border border-stone-200">
@@ -189,7 +167,7 @@ export default function LocationPage({ params }: Props) {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-charcoal group-hover:text-nordic-800 transition-colors">
+                  <h3 className="text-xl font-semibold text-charcoal group-hover:text-nordic-800 transition-colors">
                     {cat!.name} Mattress
                   </h3>
                   <p className="text-xs text-charcoal-500 mt-1 line-clamp-2">
@@ -231,12 +209,8 @@ export default function LocationPage({ params }: Props) {
       {/* "Why Choose Us in [State]" */}
       <section className="py-20 bg-white border-b border-stone-200/70">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-nordic-100 text-nordic-900 text-xs font-semibold">
-            <Award className="w-3.5 h-3.5 text-nordic-700" />
-            <span>Direct-to-Consumer Service</span>
-          </div>
 
-          <h2 className="text-3xl font-bold text-charcoal">
+          <h2 className="text-3xl font-semibold text-charcoal">
             Why Choose {brandConfig.name} in {loc.stateName}?
           </h2>
 
@@ -245,17 +219,17 @@ export default function LocationPage({ params }: Props) {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
-            <div className="p-5 rounded-2xl bg-mist/60 border border-stone-200/70 text-center space-y-1.5">
+            <div className="p-5 rounded-2xl bg-mist border border-stone-200/70 text-center space-y-1.5">
               <Truck className="w-5 h-5 text-nordic-700 mx-auto" />
               <div className="font-bold text-sm text-charcoal">Free In-Room Delivery</div>
               <div className="text-[11px] text-charcoal-500">Direct to your bedroom</div>
             </div>
-            <div className="p-5 rounded-2xl bg-mist/60 border border-stone-200/70 text-center space-y-1.5">
+            <div className="p-5 rounded-2xl bg-mist border border-stone-200/70 text-center space-y-1.5">
               <ShieldCheck className="w-5 h-5 text-nordic-700 mx-auto" />
               <div className="font-bold text-sm text-charcoal">10-Year Warranty</div>
               <div className="text-[11px] text-charcoal-500">Non-sag core protection</div>
             </div>
-            <div className="p-5 rounded-2xl bg-mist/60 border border-stone-200/70 text-center space-y-1.5">
+            <div className="p-5 rounded-2xl bg-mist border border-stone-200/70 text-center space-y-1.5">
               <Clock className="w-5 h-5 text-nordic-700 mx-auto" />
               <div className="font-bold text-sm text-charcoal">100-Night Sleep Trial</div>
               <div className="text-[11px] text-charcoal-500">100% money-back guarantee</div>
@@ -265,13 +239,13 @@ export default function LocationPage({ params }: Props) {
       </section>
 
       {/* Cities List Section */}
-      <section id="cities" className="py-20 sm:py-24 bg-mist/60 border-b border-stone-200/70">
+      <section id="cities" className="py-20 sm:py-24 bg-mist border-b border-stone-200/70">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+          <span className="text-sm font-medium text-nordic-700">
             Full Coverage Across {loc.stateName}
           </span>
 
-          <h2 className="text-3xl font-bold text-charcoal">
+          <h2 className="text-3xl font-semibold text-charcoal">
             Cities & Towns Covered for Rapid Doorstep Delivery
           </h2>
 
@@ -307,7 +281,7 @@ export default function LocationPage({ params }: Props) {
       {/* Closing CTA */}
       <section className="py-16 bg-nordic-900 text-white text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <h2 className="text-3xl font-extrabold tracking-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-white">
             Get Your Mattress Delivered in {loc.stateName}
           </h2>
           <p className="text-nordic-200 text-sm leading-relaxed">
@@ -316,7 +290,7 @@ export default function LocationPage({ params }: Props) {
           <div className="pt-3 flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/#collections"
-              className="px-8 py-4 bg-white text-nordic-900 hover:bg-mist font-bold rounded-2xl shadow-md transition-colors text-sm"
+              className="px-8 py-4 bg-white text-nordic-900 hover:bg-mist font-bold rounded-2xl shadow-subtle transition-colors text-sm"
             >
               Shop All Mattresses
             </Link>

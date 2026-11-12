@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyMobileBar from "@/components/StickyMobileBar";
+import ScrollReveal from "@/components/ScrollReveal";
 import CartDrawer from "@/components/CartDrawer";
 import { CartProvider } from "@/components/CartContext";
 import { OrganizationJsonLd } from "@/components/JsonLd";
 import { brandConfig } from "@/data/brandConfig";
 
-const jakarta = Plus_Jakarta_Sans({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -56,9 +57,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={jakarta.variable}>
+    <html lang="en" className={manrope.variable}>
       <body className="min-h-screen flex flex-col bg-cloud text-charcoal selection:bg-nordic-800 selection:text-white pb-14 md:pb-0 antialiased">
         <OrganizationJsonLd />
+        <ScrollReveal />
         <CartProvider>
           <Header />
           <CartDrawer />

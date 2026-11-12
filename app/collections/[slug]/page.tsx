@@ -90,18 +90,14 @@ export default function CategoryPage({ params }: Props) {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-mist/70 to-cloud border-b border-stone-200/80 py-14 sm:py-20">
+      <section className="bg-white py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Text details */}
             <div className="lg:col-span-7 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-nordic-100 text-nordic-900 text-xs font-semibold">
-                <Award className="w-3.5 h-3.5 text-nordic-700" />
-                <span>Engineered Sleep Series</span>
-              </div>
 
               {/* Exact H1 */}
-              <h1 className="text-3xl sm:text-5xl font-extrabold text-charcoal tracking-tight leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-charcoal tracking-tight">
                 {category.name} Mattress Collection
               </h1>
 
@@ -110,39 +106,30 @@ export default function CategoryPage({ params }: Props) {
                 {category.tagline}
               </p>
 
-              {/* Quick specs pill row */}
-              <div className="pt-2 flex flex-wrap gap-2 text-xs">
-                <span className="px-3 py-1.5 rounded-xl bg-white border border-stone-200 text-charcoal font-medium shadow-subtle">
-                  <strong>Firmness:</strong> {category.firmnessScale}
-                </span>
-                <span className="px-3 py-1.5 rounded-xl bg-white border border-stone-200 text-charcoal font-medium shadow-subtle">
-                  <strong>Core:</strong> {category.material}
-                </span>
-                <span className="px-3 py-1.5 rounded-xl bg-white border border-stone-200 text-charcoal font-medium shadow-subtle">
-                  <strong>Warranty:</strong> {category.warranty}
-                </span>
-              </div>
+              <p className="text-sm text-charcoal-500">
+                {category.firmnessScale} · {category.warranty}
+              </p>
 
               {/* Action buttons */}
               <div className="pt-4 flex flex-wrap gap-3">
                 <a
                   href="#products"
-                  className="px-6 py-3.5 bg-nordic-800 hover:bg-nordic-900 text-white font-bold rounded-2xl text-xs sm:text-sm transition-colors shadow-sm"
+                  className="px-6 py-3 bg-nordic-800 hover:bg-nordic-900 text-white font-semibold rounded-full text-base transition-colors duration-300 active:scale-[0.98]"
                 >
-                  View Models & Pricing • From ₹{category.priceTable[0].thickness6Price.toLocaleString("en-IN")}
+                  View models, from ₹{category.priceTable[0].thickness6Price.toLocaleString("en-IN")}
                 </a>
                 <a
                   href="#size-table"
-                  className="px-6 py-3.5 bg-white hover:bg-mist text-charcoal font-semibold rounded-2xl text-xs sm:text-sm border border-stone-200 shadow-subtle transition-colors"
+                  className="px-6 py-3 text-nordic-800 hover:bg-mist font-semibold rounded-full text-base transition-colors duration-300"
                 >
-                  Size & Dimension Guide
+                  Size guide
                 </a>
               </div>
             </div>
 
             {/* Visual preview */}
             <div className="lg:col-span-5">
-              <div className="relative h-72 sm:h-84 w-full rounded-3xl overflow-hidden shadow-card border border-stone-200/80 bg-white">
+              <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden bg-mist">
                 <Image
                   src={category.heroImage}
                   alt={`${category.name} mattress aesthetic preview`}
@@ -151,9 +138,6 @@ export default function CategoryPage({ params }: Props) {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-charcoal shadow-sm">
-                  100-Night Trial Included
-                </div>
               </div>
             </div>
           </div>
@@ -167,12 +151,12 @@ export default function CategoryPage({ params }: Props) {
             {category.benefitsList.map((item, idx) => {
               const IconComp = BENEFIT_ICON_MAP[item.iconName] || CheckCircle2;
               return (
-                <div key={idx} className="flex items-start gap-4 p-5 rounded-2xl bg-mist/50 border border-stone-200/70">
-                  <div className="w-12 h-12 rounded-2xl bg-nordic-50 border border-nordic-200/60 text-nordic-800 flex items-center justify-center flex-shrink-0 shadow-subtle">
+                <div key={idx} className="flex items-start gap-4 p-5 rounded-3xl bg-mist">
+                  <div className="w-12 h-12 rounded-2xl bg-white text-nordic-800 flex items-center justify-center flex-shrink-0">
                     <IconComp className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-charcoal text-sm sm:text-base">
+                    <h3 className="font-semibold text-charcoal text-sm sm:text-base">
                       {item.title}
                     </h3>
                     <p className="text-xs text-charcoal-500 mt-1 leading-relaxed">
@@ -187,13 +171,13 @@ export default function CategoryPage({ params }: Props) {
       </section>
 
       {/* ProductQuickAddCard Grid */}
-      <section id="products" className="py-20 bg-mist/60 border-b border-stone-200/70">
+      <section id="products" className="py-20 bg-mist border-b border-stone-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+            <span className="text-sm font-medium text-nordic-700">
               Choose Configuration
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mt-2 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-charcoal mt-2 tracking-tight">
               Select Your {category.name} Mattress
             </h2>
             <p className="text-charcoal-700 text-sm mt-1.5">
@@ -221,12 +205,12 @@ export default function CategoryPage({ params }: Props) {
             ))}
 
             {/* Custom order banner card */}
-            <div className="bg-white rounded-3xl border border-stone-200/80 p-7 flex flex-col justify-between shadow-subtle">
+            <div className="bg-white rounded-2xl border border-stone-200/80 p-7 flex flex-col justify-between shadow-subtle">
               <div className="space-y-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-nordic-800">
+                <span className="text-sm font-medium text-nordic-800">
                   Bespoke Dimensions
                 </span>
-                <h3 className="text-lg font-bold text-charcoal">
+                <h3 className="text-lg font-semibold text-charcoal">
                   Custom Size Available
                 </h3>
                 <p className="text-xs text-charcoal-700 leading-relaxed">
@@ -264,10 +248,10 @@ export default function CategoryPage({ params }: Props) {
       <section className="py-20 sm:py-28 bg-white border-b border-stone-200/70">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+            <span className="text-sm font-medium text-nordic-700">
               Material Engineering
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mt-2 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-charcoal mt-2 tracking-tight">
               What is the {category.name} Mattress?
             </h2>
           </div>
@@ -277,9 +261,9 @@ export default function CategoryPage({ params }: Props) {
           </div>
 
           {/* Construction Layer Highlight Box */}
-          <div className="mt-12 p-7 rounded-3xl bg-mist/60 border border-stone-200/80 grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+          <div className="mt-12 p-7 rounded-2xl bg-mist border border-stone-200/80 grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
             <div className="space-y-3">
-              <h4 className="text-base font-bold text-charcoal">
+              <h4 className="text-base font-semibold text-charcoal">
                 Key Construction Specifications
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-charcoal-700">
@@ -304,7 +288,7 @@ export default function CategoryPage({ params }: Props) {
       </section>
 
       {/* SizeComparisonTable */}
-      <section id="size-table" className="py-20 sm:py-28 bg-mist/60 border-b border-stone-200/70">
+      <section id="size-table" className="py-20 sm:py-28 bg-mist border-b border-stone-200/70">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SizeComparisonTable
             title={`${category.name} Size & Thickness Comparison`}
@@ -334,13 +318,13 @@ export default function CategoryPage({ params }: Props) {
 
       {/* Cross-Sell Band */}
       {(crossSell1 || crossSell2) && (
-        <section className="py-20 bg-mist/60 border-b border-stone-200/70">
+        <section className="py-20 bg-mist border-b border-stone-200/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-xs font-semibold tracking-widest text-nordic-700 bg-nordic-100 px-3.5 py-1 rounded-full uppercase">
+              <span className="text-sm font-medium text-nordic-700">
                 Explore Alternatives
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mt-2 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-charcoal mt-2 tracking-tight">
                 Sleepers Also Explored
               </h2>
             </div>
@@ -350,7 +334,7 @@ export default function CategoryPage({ params }: Props) {
                 <Link
                   key={cross!.slug}
                   href={`/collections/${cross!.slug}`}
-                  className="group bg-white rounded-3xl border border-stone-200/80 p-6 flex flex-col justify-between hover:shadow-card-hover transition-all"
+                  className="group bg-white rounded-2xl border border-stone-200/80 p-6 flex flex-col justify-between hover:shadow-card-hover transition-all"
                 >
                   <div className="flex gap-4">
                     <div className="relative w-24 h-24 rounded-2xl overflow-hidden bg-mist flex-shrink-0 border border-stone-200">
@@ -363,7 +347,7 @@ export default function CategoryPage({ params }: Props) {
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <h3 className="text-lg font-bold text-charcoal group-hover:text-nordic-800 transition-colors">
+                        <h3 className="text-lg font-semibold text-charcoal group-hover:text-nordic-800 transition-colors">
                           {cross!.name}
                         </h3>
                         <span className="text-[10px] bg-stone-100 px-2.5 py-0.5 rounded-full text-charcoal font-semibold">

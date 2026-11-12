@@ -74,7 +74,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       {
         question: "What happens to returned mattresses? Are they resold?",
         answer:
-          "Never. Restora maintains a strict zero-resale policy for returned mattresses. Every returned mattress is donated to local vetted charities and community shelters or sent to certified mattress recycling facilities to be repurposed into carpet underlay.",
+          "Never. Restlon maintains a strict zero-resale policy for returned mattresses. Every returned mattress is donated to local vetted charities and community shelters or sent to certified mattress recycling facilities to be repurposed into carpet underlay.",
       },
       {
         question: "What is covered under the 10-Year Warranty?",

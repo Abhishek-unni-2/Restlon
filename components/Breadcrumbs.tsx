@@ -32,7 +32,7 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   };
 
   return (
-    <div className="w-full bg-mist/60 border-b border-stone-200/70 py-3 px-4 sm:px-6 lg:px-8 text-xs text-charcoal-500">
+    <div className="w-full bg-mist border-b border-stone-200/70 py-3 px-4 sm:px-6 lg:px-8 text-xs text-charcoal-500">
       <JsonLd data={breadcrumbSchema} />
       <div className="max-w-7xl mx-auto flex items-center gap-2 flex-wrap">
         <Link

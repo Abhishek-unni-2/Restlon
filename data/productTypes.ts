@@ -36,10 +36,10 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
     angle: "Spacious luxury for couples & families",
     emphasize: "Anti-sag technology, climate-adaptive fabric, 78×72 size",
     heroImage: "/images/Screenshot-2023-11-06-133120-1-1-1-2048x915.png",
-    metaTitle: "King Size Mattress | Buy Online – Restora",
+    metaTitle: "King Size Mattress | Buy Online – Restlon",
     metaDescription: "Buy premium 78x72 King Size mattresses online in India. Advanced anti-sag engineering, climate-adaptive fabrics, 100-night trial, and free doorstep delivery.",
     openingParagraph:
-      "A standard King Size Mattress measuring 78 × 72 inches (198 × 183 cm) represents the absolute pinnacle of bedroom comfort for couples, co-sleeping families, and pet owners across India. Having an extra 12 to 16 inches of lateral expanse compared to a queen bed transforms how you sleep, eliminating inadvertent elbow knocks, body heat entrapment, and midnight disturbances when your partner rolls over. At Restora, our King Size collection integrates heavy-duty anti-sag edge framing and dual-zoned progressive core engineering to maintain planar firmness across the entire 39-square-foot surface. Crafted with climate-adaptive knit covers optimized for Indian seasonal humidity, our King mattresses deliver unmatched master-bedroom luxury.",
+      "A standard King Size Mattress measuring 78 × 72 inches (198 × 183 cm) represents the absolute pinnacle of bedroom comfort for couples, co-sleeping families, and pet owners across India. Having an extra 12 to 16 inches of lateral expanse compared to a queen bed transforms how you sleep, eliminating inadvertent elbow knocks, body heat entrapment, and midnight disturbances when your partner rolls over. At Restlon, our King Size collection integrates heavy-duty anti-sag edge framing and dual-zoned progressive core engineering to maintain planar firmness across the entire 39-square-foot surface. Crafted with climate-adaptive knit covers optimized for Indian seasonal humidity, our King mattresses deliver unmatched master-bedroom luxury.",
     keyFeatures: [
       {
         title: "Expansive 78 × 72 Family-Size Dimensions",
@@ -89,9 +89,9 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
       },
     ],
     whyChooseParagraph:
-      "Why choose Restora's King Size Mattress? Unlike cheap commercial king mattresses that use joined twin cores prone to center ridge depression, every Restora King mattress is precision-molded from a monolithic high-resilience core. We calibrate every king mattress specifically for Indian humidity conditions, bonding hypoallergenic barrier fabrics with breathable open-cell foams that resist moisture buildup. Backed by our generous 100-night at-home sleep trial and direct factory-to-bedroom delivery, you get five-star hotel comfort backed by guaranteed spinal posture support.",
+      "Why choose Restlon's King Size Mattress? Unlike cheap commercial king mattresses that use joined twin cores prone to center ridge depression, every Restlon King mattress is precision-molded from a monolithic high-resilience core. We calibrate every king mattress specifically for Indian humidity conditions, bonding hypoallergenic barrier fabrics with breathable open-cell foams that resist moisture buildup. Backed by our generous 100-night at-home sleep trial and direct factory-to-bedroom delivery, you get five-star hotel comfort backed by guaranteed spinal posture support.",
     trustLocationParagraph:
-      "With specialized distribution hubs across Kerala (Ernakulam, Trivandrum, Kozhikode), Tamil Nadu (Chennai, Coimbatore), and Maharashtra (Mumbai, Pune), Restora delivers full-size king mattresses safely boxed or pre-expanded to your doorstep. Our white-glove logistics team handles upstairs lifting, room placement, and packaging disposal at zero additional cost.",
+      "With specialized distribution hubs across Kerala (Ernakulam, Trivandrum, Kozhikode), Tamil Nadu (Chennai, Coimbatore), and Maharashtra (Mumbai, Pune), Restlon delivers full-size king mattresses safely boxed or pre-expanded to your doorstep. Our white-glove logistics team handles upstairs lifting, room placement, and packaging disposal at zero additional cost.",
     relatedCategorySlug: "fusiontech",
     relatedCategoryName: "FusionTech Hybrid Pocket Spring Collection",
     faqs: [
@@ -105,7 +105,7 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
       },
       {
         question: "Does the middle of a King mattress sag after 1 or 2 years?",
-        answer: "Restora King mattresses use dense 32D+ support cores that undergo 100,000-cycle durability testing to ensure the middle remains flat, supported, and sag-free for over a decade.",
+        answer: "Restlon King mattresses use dense 32D+ support cores that undergo 100,000-cycle durability testing to ensure the middle remains flat, supported, and sag-free for over a decade.",
       },
     ],
   },
@@ -115,10 +115,10 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
     angle: "Medical-grade spinal support",
     emphasize: "Multi-zone support, doctor-recommended framing",
     heroImage: "/images/home-about-us.jpg",
-    metaTitle: "Orthopedic Mattress | Buy Online – Restora",
+    metaTitle: "Orthopedic Mattress | Buy Online – Restlon",
     metaDescription: "Doctor-recommended orthopedic mattresses engineered for spinal alignment and chronic back pain relief. Multi-zone support, 10-year warranty, free trial.",
     openingParagraph:
-      "An Orthopedic Mattress is a scientifically calibrated sleep surface engineered to maintain the spine's natural physiological curvature while decompressing spinal discs, lumbar vertebrae, and pelvic joints. Over 70% of urban working Indians experience recurring lower back stiffness caused by prolonged sedentary desk postures or soft, sagging mattresses that induce unnatural spinal bending. At Restora, our orthopedic mattress line employs medical-grade multi-zone differential firming, offering gentle contouring for the thoracic spine while providing firm, uncompromising resistance under the lumbar and sacral regions. This eliminates nerve impingement and promotes healthy blood circulation throughout the sleep cycle.",
+      "An Orthopedic Mattress is a scientifically calibrated sleep surface engineered to maintain the spine's natural physiological curvature while decompressing spinal discs, lumbar vertebrae, and pelvic joints. Over 70% of urban working Indians experience recurring lower back stiffness caused by prolonged sedentary desk postures or soft, sagging mattresses that induce unnatural spinal bending. At Restlon, our orthopedic mattress line employs medical-grade multi-zone differential firming, offering gentle contouring for the thoracic spine while providing firm, uncompromising resistance under the lumbar and sacral regions. This eliminates nerve impingement and promotes healthy blood circulation throughout the sleep cycle.",
     keyFeatures: [
       {
         title: "Medical-Grade Multi-Zone Ergonomics",
@@ -168,9 +168,9 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
       },
     ],
     whyChooseParagraph:
-      "Why choose Restora's Orthopedic Mattress? Unlike ordinary hard foam mattresses that merely feel rigid and create painful pressure sores on hips and shoulders, our orthopedic engineering combines high-resilience bonded support with pressure-dispersing comfort layers. The result is pure ergonomic balance: firm where you need structural posture correction, and forgiving where your joints press deepest. Every unit is manufactured with non-toxic adhesives and certified hypoallergenic covers, delivering therapeutic back rehabilitation every single night.",
+      "Why choose Restlon's Orthopedic Mattress? Unlike ordinary hard foam mattresses that merely feel rigid and create painful pressure sores on hips and shoulders, our orthopedic engineering combines high-resilience bonded support with pressure-dispersing comfort layers. The result is pure ergonomic balance: firm where you need structural posture correction, and forgiving where your joints press deepest. Every unit is manufactured with non-toxic adhesives and certified hypoallergenic covers, delivering therapeutic back rehabilitation every single night.",
     trustLocationParagraph:
-      "Trusted by over 45,000 households and top physiotherapists in Kochi, Chennai, Mumbai, Pune, and Coimbatore, Restora offers rapid, insured delivery direct from regional facilities. Test the mattress in your bedroom for 100 nights with our hassle-free return guarantee.",
+      "Trusted by over 45,000 households and top physiotherapists in Kochi, Chennai, Mumbai, Pune, and Coimbatore, Restlon offers rapid, insured delivery direct from regional facilities. Test the mattress in your bedroom for 100 nights with our hassle-free return guarantee.",
     relatedCategorySlug: "orthopaedic",
     relatedCategoryName: "Orthopaedic Back & Joint Collection",
     faqs: [
@@ -194,10 +194,10 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
     angle: "Adaptive pressure relief, body contouring",
     emphasize: "Motion isolation, hypoallergenic fabric",
     heroImage: "/images/sleep-solution-3.jpg",
-    metaTitle: "Memory Foam Mattress | Buy Online – Restora",
-    metaDescription: "Experience zero gravity comfort with Restora high-density memory foam mattresses. Superior motion isolation, body contouring, 100-night trial.",
+    metaTitle: "Memory Foam Mattress | Buy Online – Restlon",
+    metaDescription: "Experience zero gravity comfort with Restlon high-density memory foam mattresses. Superior motion isolation, body contouring, 100-night trial.",
     openingParagraph:
-      "A Memory Foam Mattress provides the ultimate zero-gravity sleeping sensation by reacting dynamically to your body temperature and weight distribution. As you lie down, millions of viscoelastic open cells gently yield, conforming millimetre-by-millimetre to every contour of your spine, shoulders, hips, and lower legs. This eliminates the concentrated pressure points that cause restless tossing, numbness, and poor micro-circulation. Engineered with our advanced open-cell aeration technology, Restora Memory Foam dissipates body heat far more efficiently than older viscoelastic formulations, ensuring you stay comfortable and sweat-free throughout tropical Indian nights.",
+      "A Memory Foam Mattress provides the ultimate zero-gravity sleeping sensation by reacting dynamically to your body temperature and weight distribution. As you lie down, millions of viscoelastic open cells gently yield, conforming millimetre-by-millimetre to every contour of your spine, shoulders, hips, and lower legs. This eliminates the concentrated pressure points that cause restless tossing, numbness, and poor micro-circulation. Engineered with our advanced open-cell aeration technology, Restlon Memory Foam dissipates body heat far more efficiently than older viscoelastic formulations, ensuring you stay comfortable and sweat-free throughout tropical Indian nights.",
     keyFeatures: [
       {
         title: "60D High-Density Viscoelastic Foam",
@@ -247,7 +247,7 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
       },
     ],
     whyChooseParagraph:
-      "Why choose Restora's Memory Foam Mattress? Many budget memory foam beds on the market use low-density 30D or 40D foams that quickly develop sagging body hollows within 12 months. Restora uses premium high-density 60D viscoelastic foam paired with an ultra-resilient transitional support core. This ensures you get that heavenly cradling sensation without the trapped 'quicksand' feeling, allowing you to turn smoothly and wake up refreshed.",
+      "Why choose Restlon's Memory Foam Mattress? Many budget memory foam beds on the market use low-density 30D or 40D foams that quickly develop sagging body hollows within 12 months. Restlon uses premium high-density 60D viscoelastic foam paired with an ultra-resilient transitional support core. This ensures you get that heavenly cradling sensation without the trapped 'quicksand' feeling, allowing you to turn smoothly and wake up refreshed.",
     trustLocationParagraph:
       "Delivered in a compact, easy-to-move box to thousands of homes across Maharashtra, Kerala, and Tamil Nadu. Enjoy 100 risk-free nights in your own home with free door delivery and zero-cost EMI financing options.",
     relatedCategorySlug: "memory-foam",
@@ -255,7 +255,7 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
     faqs: [
       {
         question: "Does memory foam retain body heat in warm climates?",
-        answer: "Restora Memory Foam utilizes an open-cell matrix with breathable air ventilation channels and cool-knit jacquard fabric, keeping surface temperatures noticeably cooler than standard memory foams.",
+        answer: "Restlon Memory Foam utilizes an open-cell matrix with breathable air ventilation channels and cool-knit jacquard fabric, keeping surface temperatures noticeably cooler than standard memory foams.",
       },
       {
         question: "How long does memory foam take to expand after unboxing?",
@@ -273,7 +273,7 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
     angle: "Natural latex comfort at king-size scale",
     emphasize: "100% natural latex, breathable air channels, family-size space",
     heroImage: "/images/bed-bg-10.jpg",
-    metaTitle: "King Size Latex Mattress | Buy Online – Restora",
+    metaTitle: "King Size Latex Mattress | Buy Online – Restlon",
     metaDescription: "100% natural organic king size latex mattresses. Zero toxins, breathable pin-core aeration, resilient family comfort, and a 15-year warranty.",
     openingParagraph:
       "The King Size Latex Mattress represents the ultimate investment in non-toxic, eco-luxurious family sleep. Spanning an expansive 78 × 72 inches, this mattress is crafted from 100% natural organic latex sustainably harvested from rubber plantations in Kerala. Pure natural latex offers an unmatched buoyant push-back: unlike synthetic memory foam that slowly moulds around you, latex responds instantaneously to your every turn, keeping your spine straight and your body hovering on a cloud of responsive support. With millions of microscopic pin-core aeration channels engineered from top to bottom, this king-size mattress delivers unparalleled convective cooling, making it the most breathable large-format mattress available in India.",
@@ -326,7 +326,7 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
       },
     ],
     whyChooseParagraph:
-      "Why choose Restora's King Size Latex Mattress? Manufacturing a seamless, defect-free king-size slab from 100% natural tree sap requires immense technical precision. Restora utilizes certified vulcanization molds that ensure homogenous density across all 39 square feet. There are no harsh chemical glues or foul chemical odors—just pure, fragrant natural rubber enclosed in a 100% GOTS-certified organic cotton quilt. You get the restorative, cool bounce that luxury resorts specify.",
+      "Why choose Restlon's King Size Latex Mattress? Manufacturing a seamless, defect-free king-size slab from 100% natural tree sap requires immense technical precision. Restlon utilizes certified vulcanization molds that ensure homogenous density across all 39 square feet. There are no harsh chemical glues or foul chemical odors—just pure, fragrant natural rubber enclosed in a 100% GOTS-certified organic cotton quilt. You get the restorative, cool bounce that luxury resorts specify.",
     trustLocationParagraph:
       "Handcrafted in southern India and shipped directly across Kerala, Tamil Nadu, Karnataka, and Maharashtra. Every mattress arrives backed by a 15-year warranty, free white-glove doorstep delivery, and 100 risk-free nights of home sleep testing.",
     relatedCategorySlug: "latex-foam",
@@ -352,10 +352,10 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
     angle: "Affordable, natural, cool comfort",
     emphasize: "6/8/10-inch thickness options, dust & allergen resistance",
     heroImage: "/images/home-about-us.jpg",
-    metaTitle: "Natural Latex Mattress | Buy Online – Restora",
+    metaTitle: "Natural Latex Mattress | Buy Online – Restlon",
     metaDescription: "Buy pure 100% natural latex mattresses online. Available in 6, 8, and 10 inch thickness. Naturally cooling, anti-dust mite, eco-certified sleep.",
     openingParagraph:
-      "A Natural Latex Mattress is the cleanest, healthiest, and most environmentally responsible sleep surface you can choose for your home. While petrochemical foams degrade, flatten, and trap heat over time, pure natural latex derived from the sap of rubber trees offers superior elasticity, organic breathability, and non-toxic durability. Available in 6, 8, and 10-inch thickness configurations, Restora Natural Latex mattresses deliver progressive contouring support that aligns your spine naturally without creating uncomfortable pressure points. Certified OEKO-TEX Standard 100 Class 1 and eco-INSTITUT tested, it is completely free from heavy metals, formaldehyde, and chemical flame retardants.",
+      "A Natural Latex Mattress is the cleanest, healthiest, and most environmentally responsible sleep surface you can choose for your home. While petrochemical foams degrade, flatten, and trap heat over time, pure natural latex derived from the sap of rubber trees offers superior elasticity, organic breathability, and non-toxic durability. Available in 6, 8, and 10-inch thickness configurations, Restlon Natural Latex mattresses deliver progressive contouring support that aligns your spine naturally without creating uncomfortable pressure points. Certified OEKO-TEX Standard 100 Class 1 and eco-INSTITUT tested, it is completely free from heavy metals, formaldehyde, and chemical flame retardants.",
     keyFeatures: [
       {
         title: "100% Natural Rubber Sap Construction",
@@ -413,7 +413,7 @@ export const PRODUCT_TYPES: ProductTypeData[] = [
       },
     ],
     whyChooseParagraph:
-      "Why choose Restora's Natural Latex Mattress? We eliminate the middlemen and import markups by sourcing raw latex sap directly from local Kerala estates and processing it in state-of-the-art regional facilities. This allows us to offer 100% certified organic latex mattresses at fair, honest prices. Each mattress is wrapped in unbleached organic cotton quilted with natural wool, creating a completely biodegradable, naturally cooling sleep oasis.",
+      "Why choose Restlon's Natural Latex Mattress? We eliminate the middlemen and import markups by sourcing raw latex sap directly from local Kerala estates and processing it in state-of-the-art regional facilities. This allows us to offer 100% certified organic latex mattresses at fair, honest prices. Each mattress is wrapped in unbleached organic cotton quilted with natural wool, creating a completely biodegradable, naturally cooling sleep oasis.",
     trustLocationParagraph:
       "Proudly manufactured in southern India with dedicated customer support across Kerala, Tamil Nadu, and Maharashtra. Backed by our 100-night risk-free trial, 15-year warranty, and free pan-India doorstep delivery with zero-cost EMI.",
     relatedCategorySlug: "antimicrobial",

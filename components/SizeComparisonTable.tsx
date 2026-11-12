@@ -76,11 +76,11 @@ export default function SizeComparisonTable({
   };
 
   return (
-    <div className="w-full bg-white rounded-3xl border border-stone-200/80 p-6 sm:p-8 shadow-card">
+    <div className="w-full bg-white rounded-2xl border border-stone-200/80 p-6 sm:p-8 shadow-card">
       {/* Header with Unit and Thickness Toggles */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-stone-100">
         <div>
-          <h3 className="text-2xl sm:text-3xl font-bold text-charcoal">{title}</h3>
+          <h3 className="text-2xl sm:text-3xl font-semibold text-charcoal">{title}</h3>
           <p className="text-xs sm:text-sm text-charcoal-500 mt-1">{subtitle}</p>
         </div>
 
@@ -133,7 +133,7 @@ export default function SizeComparisonTable({
       <div className="overflow-x-auto mt-6">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="border-b border-stone-200 text-xs font-bold uppercase tracking-wider text-charcoal-500 bg-mist/60">
+            <tr className="border-b border-stone-200 text-xs font-bold uppercase tracking-wider text-charcoal-500 bg-mist">
               <th className="py-3 px-4 rounded-l-xl">Size Category</th>
               <th className="py-3 px-4">Dimensions</th>
               <th className="py-3 px-4 text-center">6-Inch Height</th>

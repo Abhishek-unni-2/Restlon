@@ -22,12 +22,12 @@ export default function CartDrawer() {
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-6 sm:pl-10">
         <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col">
           {/* Header */}
-          <div className="flex items-center justify-between px-6 py-5 border-b border-stone-200 bg-mist/60">
+          <div className="flex items-center justify-between px-6 py-5 border-b border-stone-200 bg-mist">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-xl bg-nordic-100 text-nordic-800 flex items-center justify-center">
                 <ShoppingBag className="w-4 h-4" />
               </div>
-              <h2 className="text-base sm:text-lg font-bold text-charcoal">Your Sleep Basket</h2>
+              <h2 className="text-base sm:text-lg font-semibold text-charcoal">Your Sleep Basket</h2>
             </div>
             <button
               onClick={closeCart}
@@ -55,7 +55,7 @@ export default function CartDrawer() {
                 <div className="w-16 h-16 bg-mist rounded-full flex items-center justify-center mx-auto text-charcoal-500">
                   <ShoppingBag className="w-8 h-8" />
                 </div>
-                <h3 className="text-lg font-bold text-charcoal">Your basket is empty</h3>
+                <h3 className="text-lg font-semibold text-charcoal">Your basket is empty</h3>
                 <p className="text-xs sm:text-sm text-charcoal-500 max-w-xs mx-auto">
                   Explore our orthopedic, memory foam, and natural latex mattresses designed for deep, restorative sleep.
                 </p>
@@ -70,7 +70,7 @@ export default function CartDrawer() {
               items.map((item) => (
                 <div
                   key={`${item.id}-${item.size}-${item.thickness}`}
-                  className="flex gap-4 p-3.5 bg-mist/50 rounded-2xl border border-stone-200/70 hover:border-nordic-300 transition-colors"
+                  className="flex gap-4 p-3.5 bg-mist rounded-2xl border border-stone-200/70 hover:border-nordic-300 transition-colors"
                 >
                   <div className="relative w-20 h-20 rounded-xl overflow-hidden bg-white border border-stone-200/80 flex-shrink-0">
                     <Image
@@ -83,7 +83,7 @@ export default function CartDrawer() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between items-start">
-                      <h4 className="text-sm font-bold text-charcoal truncate pr-2">
+                      <h4 className="text-sm font-semibold text-charcoal truncate pr-2">
                         {item.name}
                       </h4>
                       <button
@@ -134,7 +134,7 @@ export default function CartDrawer() {
 
           {/* Footer Summary */}
           {items.length > 0 && (
-            <div className="p-6 border-t border-stone-200 bg-mist/50 space-y-4">
+            <div className="p-6 border-t border-stone-200 bg-mist space-y-4">
               <div className="space-y-1.5 text-xs sm:text-sm">
                 <div className="flex justify-between text-charcoal-700">
                   <span>Subtotal</span>
@@ -157,7 +157,7 @@ export default function CartDrawer() {
               <div className="space-y-2">
                 <button
                   onClick={() => alert("Proceeding to secure checkout (Razorpay / Cashfree / Stripe).")}
-                  className="w-full py-4 bg-nordic-800 hover:bg-nordic-900 text-white font-bold rounded-2xl text-center shadow-md transition-colors flex items-center justify-center gap-2 text-sm"
+                  className="w-full py-4 bg-nordic-800 hover:bg-nordic-900 text-white font-bold rounded-2xl text-center shadow-subtle transition-colors flex items-center justify-center gap-2 text-sm"
                 >
                   <span>Proceed to Checkout</span>
                   <ArrowRight className="w-4 h-4" />
