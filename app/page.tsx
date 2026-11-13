@@ -35,6 +35,8 @@ export default function HomePage() {
         primaryCtaLink="#collections"
         secondaryCtaText="Compare sizes"
         secondaryCtaLink="/mattress-types/king-size-mattress"
+        videoSrc="/videos/hero-sleep-stable.mp4"
+        posterSrc="/images/home-about-us.jpg"
       />
 
       <TrustStrip />
